@@ -1,0 +1,83 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ResearhNet
+  link(rel='styleSheet' href='mainRegStyle.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+  nav.navP
+    a(href='home.html')
+      img(src='images/logo.png')
+    .nav-links
+      ul
+        li
+          a(href='/') HOME
+        li
+          a(href='/about') ABOUT
+        li
+          a(href='/reinfo') RESEARCH INFO
+        li
+          a(href='') REGISTRATION
+          div#dropdown 
+            ul
+              li 
+                a(href='/registration') Student
+              li 
+                a(href='/regTeacher') Teacher
+        li
+          a(href='/login') LOG IN
+    div
+      ul
+        li
+          a(href='/contact1') CONTACT US
+  block content 
+  div.container
+    h3 Give Your Information
+    form(action="/contact1", method='post', class="myform")
+      input(type="text", class="myInput", name="name", placeHolder="Enter your name")
+      input(type="phone", class="myInput", name="phone", placeHolder="Enter your phone number")
+      input(type="email", class="myInput", name="email", placeHolder="Enter your email id")
+      textarea(type="text", class="myInput" name="concern" cols="30" rows="10" placeholder="Consern")
+        
+      button(class="btn")
+        |Submit
+      div.c2
+        |#{result}
+section.footer
+  h4 About Us
+  p
+    | This website was created to serve all the research enthusiastics around the world.
+    br
+    | We hope together we can make the world a better place.
+  .icons
+    i.fa.fa-facebook
+    i.fa.fa-twitter
+    i.fa.fa-instagram
+    i.fa.fa-linkedin
+
+
+//- extends before.pug
+
+//- block scripts
+//-   script(src='/static/index.js')
+
+//- block style     
+//-     style
+//-       include ../static/style.css
+//-       include ../static/styleContact.css
+
+//- block content 
+//-   div.container
+//-     h3 Give Your Information
+//-     form(action="/contact1", method='post', class="myform")
+//-       input(type="text", class="myInput", name="name", placeHolder="Enter your name")
+//-       input(type="phone", class="myInput", name="phone", placeHolder="Enter your phone number")
+//-       input(type="email", class="myInput", name="email", placeHolder="Enter your email id")
+//-       textarea(type="text", class="myInput" name="consern" cols="30" rows="10" placeholder="Consern")
+        
+//-       button(class="btn")
+//-         |Submit
+//-       div.c2
+//-         |#{result}

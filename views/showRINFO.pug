@@ -1,0 +1,78 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ResearhNet
+  style
+         include ../static/reStu.css
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+   nav.navP
+    a(href='home.html')
+      img(src='images/logo.png')
+    .nav-links
+      ul
+        li
+          a(href='/') HOME
+        li
+          a(href='/about') ABOUT
+        li
+          a(href='/reinfo') RESEARCH INFO
+        li
+          a(href='') REGISTRATION
+          div#dropdown 
+            ul
+              li 
+                a(href='/registration') Student
+              li 
+                a(href='/regTeacher') Teacher
+        li
+          a(href='/login') LOG IN
+    div
+      ul
+        li
+          a(href='/contact1') CONTACT US
+section.review
+  .r2
+    h1 Research Information
+    .rRow
+      .rCol
+        div          
+          p
+          div.info
+            ul 
+              each item in items 
+                div.ele
+                  h3 #{item[0]}
+                  h4 #{item[1]}
+
+section.footer
+  h4 About Us
+  p
+    | This website was created to serve all the research enthusiastics around the world.
+    br
+    | We hope together we can make the world a better place.
+  .icons
+    i.fa.fa-facebook
+    i.fa.fa-twitter
+    i.fa.fa-instagram
+    i.fa.fa-linkedin
+
+
+//- extends base.pug
+
+//- block scripts
+//-   script(src='/static/index.js')
+
+//- block style     
+//-     style
+//-       include ../static/style.css
+//-       include ../static/styleClass.css
+
+//- block content 
+//-   div.container
+//-     div.card
+//-       h3 RESEARCH INFORMATION
+//-       |#{result}
+//-       |#{items}

@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#navbar {
+  background-color: rgb(176, 173, 152);
+  padding: 19px 20px;
+  font-family: "Square Peg", cursive;
+  font-size: 35px;
+  box-shadow: 0 0 10px #00000070;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 207, 145);
+  font-size: 35px;
+  font-weight: bolder;
+  /*filter: invert(1);  logo r color change korte*/
+}
+.logo_in {
+  color: rgb(255, 128, 1);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar li a {
+  text-decoration: none;
+  padding: 30px 25px;
+  color: antiquewhite;
+  font-weight: bold;
+  /*font size:1.5 rem ekhaneo deoa jai*/
+}
+
+#navbar li a:hover {
+  text-decoration: none;
+  padding: 30px 25px;
+  color: rgb(255, 145, 0);
+}
+
+#intro {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Square Peg", cursive;
+  font-size: 75px;
+  background: center/cover url("bg1.jpg");
+  background-repeat: no-repeat;
+
+  height: 300px;
+  /* background-color: bisque; */
+}
+
+#intro div.small {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Square Peg", cursive;
+  font-size: 35px;
+}
+
+#mission {
+  /*padding bottom*/
+  margin: auto;
+  height: 300px;
+  background-color: rgb(151, 218, 197);
+}
+
+#mission h2 {
+  text-align: center;
+  padding-top: 15px;
+  font-family: "Square Peg", cursive;
+  font-size: 35px;
+}
+.outerCard {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.card {
+  display: inline-table;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 20%;
+  margin: 8px 25px;
+  height: 200px;
+  background-color: #ffe7cc;
+}
+
+.card h3 {
+  text-align: center;
+  padding-top: 10px;
+  font-family: "Square Peg", cursive;
+  font-size: 35px;
+}
+
+.card-box {
+  display: flex;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+  font-family: "Square Peg", cursive;
+  font-size: 25px;
+}
+
+.card-img {
+  height: 50px;
+  padding: 0 12px;
+  margin: auto;
+}
+
+.card-img img {
+  height: inherit;
+}
+
+#sponsor {
+  /*padding bottom*/
+  height: 300px;
+  background-color: rgb(255, 196, 196);
+}
+
+#sponsor h2 {
+  text-align: center;
+  padding-top: 15px;
+  font-family: "Square Peg", cursive;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#sponsor h3 {
+  text-align: center;
+  padding-top: 15px;
+  font-family: "Square Peg", cursive;
+  font-size: 25px;
+  color: #e3007f;
+}
+
+#footer {
+  height: 80px;
+  background-color: rgb(255, 158, 158);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: "Square Peg", cursive;
+  color: white;
+  box-shadow: 0 0 10px #00000070;
+}
+
+#footer h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+}
+#regis{
+  position: relative;
+}
+
+#dropdown {
+  display: none;
+}
+
+#navbar ul li:hover #dropdown {
+  display: block;
+  position: absolute;
+  width:170px;
+  top:auto;
+  background-color: rgb(176, 173, 152);
+}
+
+#dropdown ul {
+  display: flex;
+  flex-direction: column;
+  margin: 7px;
+}
+
+#dropdown ul li {
+  width: 100px;
+  padding: 10px;
+}
+
+.b{
+  width: 2px;
+  height: 40px;
+  background: rgb(230, 227, 227);
+  margin: 0 30px;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+}

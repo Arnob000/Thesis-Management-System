@@ -1,0 +1,107 @@
+doctype html
+
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ResearhNet
+  link(rel='styleSheet' href='mainRegStyle.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+  nav.navP
+    a(href='home.html')
+      img(src='images/logo.png')
+    .nav-links
+      ul
+        li
+          a(href='/') HOME
+        li
+          a(href='/about') ABOUT
+        li
+          a(href='/reinfo') RESEARCH INFO
+        li
+          a(href='') REGISTRATION
+          div#dropdown 
+            ul
+              li 
+                a(href='/registration') Student
+              li 
+                a(href='/regTeacher') Teacher
+        li
+          a(href='/login') LOG IN
+    div
+      ul
+        li
+          a(href='/contact1') CONTACT US
+  block content 
+  div.container
+    h3 Give Your Information
+    form(action="/regTeacher", method='post', class="myform")
+      input(type="text", class="myInput", name="firstname", placeHolder="Enter your first name")
+      input(type="text", class="myInput", name="lastname", placeHolder="Enter your last name")
+      input(type="phone", class="myInput", name="phone", placeHolder="Enter your phone number")
+      input(type="date", class="myInput", name="dob", placeHolder="Enter your Date of Birth")
+      input(type="email", class="myInput", name="email", placeHolder="Enter your email id")
+      input(type="text", class="myInput", name="address", placeHolder="Enter your address")
+      input(type="text", class="myInput", name="username", placeHolder="Enter your username")
+      input(type="password", class="myInput", name="password", placeHolder="Enter your password")
+      //student
+      input(type="text", class="myInput", name="department", placeHolder="Enter your department name")
+      input(type="text", class="myInput", name="designation", placeHolder="Enter your designation")
+      h4 Select your field of work
+        //dropdown
+        select(name='dropDown', class='drop' id='')
+                each t in types
+                    option=t
+      button(class="btn")
+        |Submit
+      div.c2
+        |#{result}
+
+section.footer
+  h4 About Us
+  p
+    | This website was created to serve all the research enthusiastics around the world.
+    br
+    | We hope together we can make the world a better place.
+  .icons
+    i.fa.fa-facebook
+    i.fa.fa-twitter
+    i.fa.fa-instagram
+    i.fa.fa-linkedin
+
+
+//- extends before.pug
+
+//- block scripts
+//-   script(src='/static/index.js')
+
+//- block style     
+//-     style
+//-       include ../static/style.css
+//-       include ../static/styleContact.css
+
+//- block content 
+//-   div.container
+//-     h3 Give Your Information
+//-     form(action="/regTeacher", method='post', class="myform")
+//-       input(type="text", class="myInput", name="firstname", placeHolder="Enter your first name")
+//-       input(type="text", class="myInput", name="lastname", placeHolder="Enter your last name")
+//-       input(type="phone", class="myInput", name="phone", placeHolder="Enter your phone number")
+//-       input(type="date", class="myInput", name="dob", placeHolder="Enter your Date of Birth")
+//-       input(type="email", class="myInput", name="email", placeHolder="Enter your email id")
+//-       input(type="text", class="myInput", name="address", placeHolder="Enter your address")
+//-       input(type="text", class="myInput", name="username", placeHolder="Enter your username")
+//-       input(type="password", class="myInput", name="password", placeHolder="Enter your password")
+//-       //student
+//-       input(type="text", class="myInput", name="department", placeHolder="Enter your department name")
+//-       input(type="text", class="myInput", name="designation", placeHolder="Enter your designation")
+//-       h4 Select your field of work
+//-         //dropdown
+//-         select(name='dropDown', class='drop' id='')
+//-                 each t in types
+//-                     option=t
+//-       button(class="btn")
+//-         |Submit
+//-       div.c2
+//-         |#{result}

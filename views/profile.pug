@@ -1,0 +1,156 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ResearhNet
+  link(rel='styleSheet' href='pfile.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+  nav.navP
+    a(href='home.html')
+      img(src='images/logo.png')
+    .nav-links
+      ul
+        li
+          a(href='/home') HOME
+        li
+          a(href='/profile') PROFILE
+        li
+          a(href='/reinfoStu') RESEARCH INFO
+        li
+          a(href='/newProject') NEW PROJECT
+        li
+          a(href='QA') Q&amp;A
+        li
+          a(href='/') LOG OUT
+    div
+      ul
+        li
+          a(href='/contact2') CONTACT US
+  .contentPf 
+    .profile-card
+        .top-section
+            i.message.fas.fa-envelope
+            i.notif.fas.fa-bell
+            .pic
+                img(src='../pic/profile.png' alt='Profile')
+            .name 
+                ul 
+                    each item in items
+                        |#{item[0]} 
+                        |#{item[1]}
+            .tag
+                ul 
+                    each item in items
+                        |#{item[8]}
+                                
+        .bottom-section
+            .social-media
+                a(href='#')
+                    i.fab.fa-facebook
+                a(href='#')
+                    i.fab.fa-twitter
+                a(href='#')
+                    i.fab.fa-instagram
+                a(href='#')
+                    i.fas.fa-link
+            .videos
+                |Department
+                ul 
+                    each o in others
+                        span #{o[0]}
+
+            .border
+            .subscribers
+                | Level
+                span 
+                    ul 
+                        each o in others
+                            |#{o[1]} 
+                            
+            .border
+            .views
+                | Term
+                span 
+                    ul 
+                        each o in others
+                            |#{o[2]}
+            
+
+section.footer
+  h4 About Us
+  p
+    | This website was created to serve all the research enthusiastics around the world.
+    br
+    | We hope together we can make the world a better place.
+  .icons
+    i.fa.fa-facebook
+    i.fa.fa-twitter
+    i.fa.fa-instagram
+    i.fa.fa-linkedin
+
+
+
+
+
+
+
+
+//- extends base.pug
+
+//- block style     
+//-     style
+//-       include ../static/style.css
+//-       include ../static/pfile.css
+
+//- block content 
+//-     .profile
+//-         .profile-card
+//-             .top-section
+//-                 i.message.fas.fa-envelope
+//-                 i.notif.fas.fa-bell
+//-                 .pic
+//-                     img(src='../pic/profile.png' alt='Profile')
+//-                 .name 
+//-                     ul 
+//-                         each item in items
+//-                             |#{item[0]} 
+//-                             |#{item[1]}
+//-                 .tag
+//-                     ul 
+//-                         each item in items
+//-                             |#{item[8]}
+                                  
+//-             .bottom-section
+//-                 .social-media
+//-                     a(href='#')
+//-                         i.fab.fa-facebook
+//-                     a(href='#')
+//-                         i.fab.fa-twitter
+//-                     a(href='#')
+//-                         i.fab.fa-instagram
+//-                     a(href='#')
+//-                         i.fas.fa-link
+//-                 .videos
+//-                     |Department
+//-                     ul 
+//-                         each o in others
+//-                             span #{o[0]}
+
+//-                 .border
+//-                 .subscribers
+//-                     | Designation
+//-                     span 
+//-                         ul 
+//-                             each o in others
+//-                                 |#{o[1]} 
+                                
+//-                 .border
+//-                 .views
+//-                     | Working Field
+//-                     span 
+//-                         ul 
+//-                             each o in others
+//-                                 |#{o[2]}
+                

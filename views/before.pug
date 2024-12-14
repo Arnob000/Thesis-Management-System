@@ -1,0 +1,31 @@
+html
+  head
+    title ResearchNet
+    block scripts
+    block style
+
+  body
+    nav#navbar
+        ul
+          div#logo
+            |Research
+            div.logo_in  Net
+          li #[a(href='/')  Home] 
+          .b
+          li #[a(href='/') About ]
+          .b
+          li #[a(href='/login') Log In ]
+          .b
+          div#regis
+            li #[a(href='/') Registration]
+              div#dropdown 
+                ul
+                  li #[a(href='/registration') Student]
+                  li #[a(href='/regTeacher') Teacher] 
+          .b
+          li #[a(href='/contact1') Contact Us ]
+
+    block content
+    footer#footer 
+        |CopyRight © 2022 RNet 
+        h3 All rights reserved

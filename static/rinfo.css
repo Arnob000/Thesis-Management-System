@@ -1,0 +1,25 @@
+.info ul li{
+  list-style: none;
+  cursor:default;
+}
+
+.info ul li a{
+  text-decoration: none;
+  text-shadow: 2px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.val{
+  text-align: left;
+  width: 500px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #fbb69b;
+  padding: auto;
+  margin: 5px 5px 5px 5px;
+  text-decoration:none;
+}

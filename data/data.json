@@ -1,0 +1,10 @@
+{
+    "types": [
+    "Electrical",
+    "Electronics",
+    "Water Resource",
+    "Ocean",
+    "Bio Medical",
+    "NULL"
+]
+}

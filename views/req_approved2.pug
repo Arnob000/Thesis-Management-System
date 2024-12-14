@@ -1,0 +1,95 @@
+
+//- html
+//-   head
+//-     title ResearchNet
+
+//-     style
+//-       include ../static/style.css
+//-       include ../static/rinfo.css
+//-   body
+//-     nav#navbar
+//-         ul
+//-           div#logo
+//-             |Research
+//-             div.logo_in  Net
+//-           li #[a(href='/Teacherhome')  Home] 
+//-           .b
+//-           li #[a(href='/treinfo') My Research Info ]
+//-           .b
+//-           li #[a(href='/') Log Out]
+//-           //li #[a(href='/registration') Registration ]
+//-           .b
+//-           li #[a(href='/contact2') Contact Us ]
+//-           .b
+//-           div#profile
+//-             li #[a(href='/profile') Profile]
+
+//- block#content 
+//-   div.container
+//-     div.card
+//-       h3 RESEARCH INFORMATION
+//-       |#{result}
+//-       div.info
+//-         ul 
+//-           each item in items 
+//-             div.ele
+//-               li #[a(href='/tshowRINFO/'+item[1]) #{item[0]} ]
+            
+  
+   
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ResearhNet
+  style
+         include ../static/reStu.css
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+  nav.navP
+    a(href='home.html')
+      img(src='images/logo.png')
+    .nav-links
+      ul
+        li
+          a(href='/teacherHome') HOME
+        li
+          a(href='/profileTeacher') PROFILE
+        li
+          a(href='/treinfo') RESEARCH INFO
+        li
+          a(href='/createProject') CREATE PROJECT
+        li
+          a(href='QAT') Q&amp;A
+        li
+          a(href='/') LOG OUT
+    div
+      ul
+        li
+          a(href='/contact3') CONTACT US
+section.review
+  .r2
+    h1 Research Information
+    .rRow
+      .rCol
+        div
+
+          p
+          div.info
+            ul 
+              each item in items 
+                div.ele
+                  li #[a(href='/reqs3/'+item[0]) #{item} ]
+section.footer
+  h4 About Us
+  p
+    | This website was created to serve all the research enthusiastics around the world.
+    br
+    | We hope together we can make the world a better place.
+  .icons
+    i.fa.fa-facebook
+    i.fa.fa-twitter
+    i.fa.fa-instagram
+    i.fa.fa-linkedin
+

@@ -1,0 +1,163 @@
+CREATE USER RNET IDENTIFIED BY rnet;
+Database: ResearchNet
+user: RNET
+pass: rnet
+-----------------------------------------------------------------Tables
+---------------------------------------------------
+person--
+
+student-
+create table Student(
+    person_id number,
+    department varchar2(30),
+    level number(2),
+    term number(2),
+    foreign key(person_id) REFERENCES person(id)
+);
+
+user_ac-
+create table user_ac(
+    username varchar2(20) primary key,
+    password varchar2(20),
+    person_id NUMBER(10),
+    foreign key(person_id) REFERENCES person(id)
+
+);
+
+research_info-
+create table research_info(
+    research_id NUMBER(30),
+    project_name varchar2(50),
+    status varchar2(10),
+    catagory_id number(20),
+    primary key(research_id),
+    foreign key(catagory_id) REFERENCES catagory(id)
+);
+
+previous-
+create table previous(
+    research_id NUMBER(30),
+   start_date date,
+   finish_date date,
+    primary key(research_id),
+    foreign key(research_id) REFERENCES research_info(research_id)
+);
+
+current-
+create table current_Project(
+    research_id NUMBER(30),
+   start_date date,
+    primary key(research_id),
+    foreign key(research_id) REFERENCES research_info(research_id)
+);
+
+lab-
+create table lab_facilities(
+    lab_id NUMBER(30),
+    lab_name varchar2(30),
+    catagory_id number(20),
+    primary key(lab_id),
+    foreign key(catagory_id) REFERENCES catagory(id)
+);
+
+instruments-
+create table instruments(
+    instrument_id NUMBER(30),
+    name varchar2(30),
+    type varchar2(20),
+    lab_id number(20),
+    primary key(instrument_id),
+    foreign key(lab_id) REFERENCES lab_facilities(lab_id)
+);
+
+journal-
+create table journal(
+    id NUMBER(30),
+    name varchar2(30),
+    short_description varchar2(20),
+    catagory_id number(20),
+    primary key(id),
+    foreign key(catagory_id) REFERENCES catagory(id)
+);
+
+book-
+create table book(
+    id NUMBER(30),
+    name varchar2(30),
+    short_description varchar2(20),
+    catagory_id number(20),
+    primary key(id),
+    foreign key(catagory_id) REFERENCES catagory(id)
+);
+
+question-
+
+create table question(
+    id NUMBER(15),
+    description varchar2(200),
+    user_name varchar2(50),
+    admin_id number(10),
+    primary key(id),
+    foreign key(admin_id) REFERENCES admin(id),
+    foreign key(user_name) REFERENCES user_ac(username)
+);
+
+answer-
+create table answer(
+    id NUMBER(20),
+    description varchar2(1000),
+    user_name varchar2(20),
+    question_id NUMBER(15),
+    primary key(id),
+    foreign key(question_id) REFERENCES question(id),
+    FOREIGN key(user_name) REFERENCES user_ac(username)
+);
+
+event-
+create table event(
+    id NUMBER(10),
+    name varchar2(75),
+    field varchar2(20),
+    topic varchar2(50),
+    admin_id NUMBER(10),
+    primary key(id),
+    foreign key(admin_id) REFERENCES admin(id)
+);
+
+current_problem-
+create table current_problem(
+    id NUMBER(10),
+    description varchar2(250),
+    field varchar2(20),
+    topic varchar2(50),
+    admin_id NUMBER(10),
+    primary key(id),
+    foreign key(admin_id) REFERENCES admin(id)
+);
+
+studentParticipate-
+create table student_participate(
+    person_id NUMBER(10),
+    research_id NUMBER(30),
+    primary key(person_id, research_id),
+    foreign key(person_id) REFERENCES person(id),
+    FOREIGN key(research_id) REFERENCES research_info(research_id)
+);
+
+teacherDoesResearch-
+create table Teacher_does_research(
+    person_id NUMBER(10),
+    research_id NUMBER(30),
+    primary key(person_id, research_id),
+    foreign key(person_id) REFERENCES person(id),
+    FOREIGN key(research_id) REFERENCES research_info(research_id)
+);
+
+labHasStaff-
+create table lab_has_staff(
+    person_id NUMBER(10),
+    lab_id NUMBER(30),
+    primary key(person_id, lab_id),
+    foreign key(person_id) REFERENCES person(id),
+    FOREIGN key(lab_id) REFERENCES lab_facilities(lab_id)
+);

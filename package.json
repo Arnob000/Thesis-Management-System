@@ -1,0 +1,18 @@
+{
+  "name": "9_danceweb",
+  "version": "1.0.0",
+  "description": "A place where you will fly! ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "oracledb": "^5.4.0",
+    "pug": "^3.0.2"
+  },
+  "liveServer.settings.port": 8000
+}

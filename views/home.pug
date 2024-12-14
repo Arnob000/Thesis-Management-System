@@ -1,0 +1,116 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title ResearhNet
+  link(rel='styleSheet' href='mainHomeStyle.css')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+section.header
+  nav.navP
+    a(href='home.html')
+      img(src='images/logo.png')
+    .nav-links
+      ul
+        li
+          a(href='/home') HOME
+        li
+          a(href='/profile') PROFILE
+        li
+          a(href='/reinfoStu') RESEARCH INFO
+        li
+          a(href='/newProject') NEW PROJECT
+        li
+          a(href='QA') Q&amp;A
+        li
+          a(href='/') LOG OUT
+    div
+      ul
+        li
+          a(href='/contact2') CONTACT US
+  .cnt         
+    .homeText
+      h1 Welcome to our arena
+      p
+        | Our goal is to make research available to every one and connect the enthusiastic people around the world!
+.border
+section.fFeatures
+  .features
+    h1 Features Our Website Offers
+    .fRow
+      .fCol
+        h3 Initiate
+        p
+          | Request to add new research projects
+          br
+          | on your inovative ideas.
+      .fCol
+        h3 Explore
+        p
+          | Explore different categories of research
+          br
+          | to find your best match.
+      .fCol
+        h3 Profile
+        p
+          | Create profile and post your credentials
+          br
+          | to join research projects
+      .fCol
+        h3 Q&amp;A
+        p
+          | Resolve your querise
+          br
+          | from experts of each catagories.
+section.footer
+  h4 About Us
+  p
+    | This website was created to serve all the research enthusiastics around the world.
+    br
+    | We hope together we can make the world a better place.
+  .icons
+    i.fa.fa-facebook
+    i.fa.fa-twitter
+    i.fa.fa-instagram
+    i.fa.fa-linkedin
+
+
+
+
+//- extends base.pug
+
+//- block scripts
+//-   script(src='/static/index.js')
+
+//- block style     
+//-     style
+//-       include ../static/style.css
+
+//- block content         
+//-     section#intro 
+//-         div Welcome to our arena
+//-         div.small We will try to serve you what you need
+
+//-     section#mission
+//-       h2 Different Sections...
+//-       div.outerCard
+//-         div.card
+//-           h3 ReSearch the way you like
+//-           div.card-box
+//-             .card-content 
+//-               p Come & See
+//-         div.card
+//-           h3 Expertise
+//-           div.card-box
+//-             .card-content 
+//-               p Come & See
+//-         div.card
+//-           h3 Perfection 
+//-           div.card-box
+//-             .card-content 
+//-               p Come & See
+//-     section#sponsor 
+//-         h2 Our sponsors 
+//-         h3 WhoKonws 
+//-         h3 WeLlB 
+//-         h3 GinKo
